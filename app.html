@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Page Title</title>
+    <title>Odd Numbers</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
     <!-- NAVBAR SECTION  -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/favicon dark.png" class="d-inline-block rounded" height="32"> App Name</a>
+            <a class="navbar-brand" href="#"><img src="img/favicon dark.png" class="d-inline-block rounded" height="32"> Odd Numbers</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,12 +45,43 @@
     </nav>
     <!-- MAIN SECTION -->
     <main class="flex-shrink-0">
-        <div class="container">
-            APP PAGE
+        <div class="container mt-3">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col-12 col-md-4 border-end border-2">
+                    <h1>Odd Numbers</h1>
+                    <h4 class="lead">
+                        A simple javascript coding exercise. It will display the selected numbers and the odd ones with be <strong>bold</strong>.
+                    </h4>
+                    <h2 class="mt-2 border-bottom border-2">Instructions</h2>
+                    <p>Enter a starting value and an ending value. Press the button and values will be displayed.</p>
+                </div>
+                <div class="col-12 col-md-8">
+                    <h5>Enter Values</h5>
+                    <form class="row gy-2 gx-3" action="">
+                        <div class="col">
+                            <input id="startValue" type="number" class="form-control" placeholder="Start Value" value="0" aria-label="Start Value">
+                        </div>
+                        <div class="col">
+                            <input id="endValue" type="number" class="form-control" placeholder="End Value" value="100" aria-label="End Value">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button id="btnSubmit" type="button" class="btn btn-warning btn-lg">Display the numbers</button>
+                        </div>
+                    </form>
+                    <h2 class="mt-3 border-bottom border-2">Results</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <tbody id="results">
+                                <!-- results will go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- FOOTER SECTION -->
-    <footer class="footer mt-auto py-3 bg-dark sticky-footer">
+    <footer class="footer mt-auto py-2 bg-dark sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-md-3 gy-1">
                 <div
