@@ -35,12 +35,19 @@ function displayNumbers(numbers) {
     for (let i = 0; i < numbers.length; i++) {
         number = numbers[i];
         
+        //I like this way of doing it, but I will try also something using css
+        // if (number % 2 == 0) {
+        //     templateRows += `<tr><td><strong>${number}</strong></td></tr>`;
+        // } else {
+        //     templateRows += `<tr><td>${number}</td></tr>`;
+        // }
+        let classType = "";
         if (number % 2 == 0) {
-            templateRows += `<tr><td><strong>${number}</strong></td></tr>`;
+            classType = "even";
         } else {
-            templateRows += `<tr><td>${number}</td></tr>`;
+            classType = "odd";
         }
-        
+        templateRows += `<tr class="${classType}"><td>${number}</td></tr>`;
     }
     document.getElementById("results").innerHTML = templateRows;
 }

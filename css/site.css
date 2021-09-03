@@ -70,3 +70,11 @@ code[class*="language-"],
 .checklist >li i{
     color: var(--secondary-color);
 }
+
+.odd{
+    font-weight: normal;
+}
+
+.even{
+    font-weight: bold;
+}
