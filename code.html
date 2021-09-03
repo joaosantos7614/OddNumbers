@@ -52,14 +52,52 @@
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-md-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        // defining the function
-                        function HelloWorld() {
-                            alert("Hello World");
-                        }
+                        //get values from the page (start or controller function)
+function getValues() {
+    //get values from page
+    let startValue = parseInt(document.getElementById("startValue").value);
+    let endValue = parseInt(document.getElementById("endValue").value);
+    let numbers;
+    if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+        //call generateNumbers()
+        numbers = generateNumbers(startValue, endValue);
+    }
+    else {
+        // warns if input other than an integer was entered
+        alert("You must enter integer values");
+    }
+    //call displayNumbers()
+    displayNumbers(numbers);
+}
+//generate values from the start value to the end value (logic function)
+function generateNumbers(startValue, endValue) {
+    let numbers = [];
+    for (i = startValue; i <= endValue; i++) {
+        numbers.push(i);
+    }
+    return numbers;
+}
+//display the numbers and mark the even numbers bold (view functions)
+function displayNumbers(numbers) {
+    let templateRows = "";
+    let number;
+    for (let i = 0; i < numbers.length; i++) {
+        number = numbers[i];
+        let classType = "";
+        if (number % 2 == 0) {
+            classType = "even";
+        } else {
+            classType = "odd";
+        }
+        //this next line is HTML and will not display correctly here
+        templateRows += `<tr class="${classType}"><td>${number}</td></tr>`;
+    }
+    document.getElementById("results").innerHTML = templateRows;
+}
                     </code></pre>
                 </div>
                 <div class="col-md-4">
-                    <h5>Some description about the code</h5>
+                    <h5>This is the JS script that will calculate the numbers to display, set the right ones to bold, and then manipulate the DOM to display them.</h5>
                 </div>
             </div>
         </div>
