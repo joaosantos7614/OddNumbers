@@ -72,9 +72,9 @@ code[class*="language-"],
 }
 
 .odd{
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .even{
-    font-weight: bold;
+    font-weight: normal;
 }
